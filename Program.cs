@@ -82,5 +82,6 @@ app.UseRequestLocalization(new RequestLocalizationOptions
     SupportedCultures = supportedCultures,
     SupportedUICultures = supportedCultures
 });
+app.Urls.Add($"http://*:{Environment.GetEnvironmentVariable("PORT")}");
 
 app.Run();
